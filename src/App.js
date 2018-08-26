@@ -4,6 +4,8 @@ import logo from './logo.svg';
 import './App.css';
 import GameIcon from './GameIcon'
 
+import Sum3 from './Sum3/Sum3.jsx'
+
 class App extends Component {
     constructor(props) {
       super(props);
@@ -14,8 +16,12 @@ class App extends Component {
     startGame(name) {
       console.log(name)
       let game = null;
-      switch(name){
+      switch(String(name)){
+        case "Sum 3" : game = <Sum3 />
+        break;
       }
+
+      console.log(game)
 
       if(game){
         ReactDOM.render(game, document.getElementById('root'))
