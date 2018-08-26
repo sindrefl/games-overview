@@ -4,8 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import GameIcon from './GameIcon'
 
-import Elm from 'react-elm-components'
-import { ELMButton } from './elm/Buttons.elm'
+import { TicTacToe } from './elm/TicTacToe.elm'
 
 import Sum3 from './Sum3/Sum3.jsx'
 
@@ -25,6 +24,8 @@ class App extends Component {
       let game = null;
       switch(String(name)){
         case "Sum 3" : game = <Sum3 />
+        break;
+        case "Tic-Tac-Toe" : game = <ReactElmWrapper src={TicTacToe}/>
         break;
       }
 
@@ -73,12 +74,6 @@ class App extends Component {
                 <div className="card-group">
                 {this.state.games.map(game => <GameIcon start={this.startGame} info={game}/>)}
                 </div>
-
-
-                {console.log(ELMButton)}
-                 <ReactElmWrapper src={ELMButton}/>
-
-
             </div>
         );
     }
