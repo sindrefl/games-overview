@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Sum3.css'
+
 
 class Number extends Component {
   render() {

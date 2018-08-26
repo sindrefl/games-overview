@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Number from './Number'
+import './Sum3.css'
 
 class NumberList extends Component{
     render(){

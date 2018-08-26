@@ -6,6 +6,8 @@ import GameIcon from './GameIcon'
 
 import Sum3 from './Sum3/Sum3.jsx'
 
+import registerServiceWorker from './registerServiceWorker';
+
 class App extends Component {
     constructor(props) {
       super(props);
@@ -13,6 +15,7 @@ class App extends Component {
             games : this.initGames(),
         }
     }
+    //primitive first attempt.. should be a router:
     startGame(name) {
       console.log(name)
       let game = null;
@@ -22,9 +25,9 @@ class App extends Component {
       }
 
       console.log(game)
-
       if(game){
-        ReactDOM.render(game, document.getElementById('root'))
+        ReactDOM.render(game, document.getElementById('root'));
+        registerServiceWorker();
       }
     }
 

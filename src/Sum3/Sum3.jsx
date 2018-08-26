@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import NumberList from './NumberList'
 import './Sum3.css';
 
